@@ -1,0 +1,9 @@
+fr\blackbalrog\pterodactyl\transfer\RemoteFile.class
+fr\blackbalrog\pterodactyl\addon\PterodactylAddon.class
+fr\blackbalrog\pterodactyl\transfer\FileTransferSession.class
+fr\blackbalrog\pterodactyl\addon\AddonContext.class
+fr\blackbalrog\pterodactyl\addon\AddonInfo.class
+fr\blackbalrog\pterodactyl\ui\components\ModernButton$1.class
+fr\blackbalrog\pterodactyl\ui\Theme.class
+fr\blackbalrog\pterodactyl\ui\components\ModernButton.class
+fr\blackbalrog\pterodactyl\addon\FileHandler.class
