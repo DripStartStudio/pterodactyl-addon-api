@@ -1,5 +1,6 @@
 fr\blackbalrog\pterodactyl\transfer\RemoteFile.class
 fr\blackbalrog\pterodactyl\addon\PterodactylAddon.class
+fr\blackbalrog\pterodactyl\addon\AddonLogger.class
 fr\blackbalrog\pterodactyl\transfer\FileTransferSession.class
 fr\blackbalrog\pterodactyl\addon\AddonContext.class
 fr\blackbalrog\pterodactyl\addon\AddonInfo.class

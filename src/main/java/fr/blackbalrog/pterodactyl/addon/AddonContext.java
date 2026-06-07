@@ -40,4 +40,12 @@ public interface AddonContext
 
 	/** Dossier addons global (%APPDATA%\Pterodactyl\addons\). */
 	Path getAddonsDir();
+
+	// ── Logging ───────────────────────────────────────────────────
+
+	/**
+	 * Logger dédié à cet addon.
+	 * Écrit dans {@code logs/addons/{addonId}/{timestamp}.log} — isolé du log principal.
+	 */
+	AddonLogger getLogger();
 }
