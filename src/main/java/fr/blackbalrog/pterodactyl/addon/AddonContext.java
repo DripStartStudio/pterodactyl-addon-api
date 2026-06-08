@@ -33,6 +33,17 @@ public interface AddonContext
 	 */
 	void addSettingsPanel(String label, JPanel panel);
 
+	// ── Actions ──────────────────────────────────────────────────
+
+	/**
+	 * Enregistre une action affichée dans le menu "Addons ▾" du gestionnaire de fichiers.
+	 * L'utilisateur voit : Addons → [nom de l'addon] → [name]
+	 *
+	 * @param name   libellé affiché (ex : "Nouveau modèle BBModel")
+	 * @param action code à exécuter au clic
+	 */
+	void registerAction(String name, Runnable action);
+
 	// ── Utilitaires ───────────────────────────────────────────────
 
 	/** Dossier de données persistantes de cet addon (%APPDATA%\Pterodactyl\addons\{id}\). */
