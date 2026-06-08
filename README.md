@@ -20,7 +20,7 @@ API publique pour créer des addons pour **Pterodactyl Panel Manager**.
 <dependency>
   <groupId>com.github.DripStartStudio</groupId>
   <artifactId>pterodactyl-addon-api</artifactId>
-  <version>2.0.0</version>
+  <version>4.0.1</version>
   <scope>provided</scope>
 </dependency>
 ```
