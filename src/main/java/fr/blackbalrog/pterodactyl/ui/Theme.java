@@ -13,6 +13,9 @@ public final class Theme
 	public static final Color BG_HOVER    = new Color(40, 52,  74);
 	public static final Color BG_SELECTED = new Color(50, 42,  80);
 
+	// FOREGROUND
+	public static final Color FG_TEXT_CONSOLE = new Color(79,  70,  229);
+
 	// Borders
 	public static final Color BORDER       = new Color(42, 52, 72);
 	public static final Color BORDER_FOCUS = new Color(129, 140, 248);
