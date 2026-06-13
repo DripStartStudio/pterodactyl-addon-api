@@ -1,5 +1,6 @@
 fr\blackbalrog\pterodactyl\addon\PterodactylAddon.class
 fr\blackbalrog\pterodactyl\addon\AddonLogger.class
+fr\blackbalrog\pterodactyl\ui\components\SLabel.class
 fr\blackbalrog\pterodactyl\ui\components\MinimalScrollBarUI$2.class
 fr\blackbalrog\pterodactyl\ui\components\MinimalScrollBarUI.class
 fr\blackbalrog\pterodactyl\ui\components\ModernComboBox.class
