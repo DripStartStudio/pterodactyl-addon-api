@@ -32,9 +32,19 @@ public class MinimalScrollBarUI extends BasicScrollBarUI
 	}
 
 	@Override
+	protected void installDefaults()
+	{
+		super.installDefaults();
+		scrollbar.setBackground(Theme.BG_SURFACE);
+		scrollbar.setBorder(javax.swing.BorderFactory.createEmptyBorder());
+	}
+
+	@Override
 	protected void paintTrack(Graphics g, JComponent c, Rectangle r)
 	{
 		Graphics2D g2 = (Graphics2D) g.create();
+		g2.setColor(Theme.BG_SURFACE);
+		g2.fillRect(r.x, r.y, r.width, r.height);
 		g2.setColor(new java.awt.Color(30, 38, 58));
 		g2.fillRoundRect(r.x + 3, r.y + 2, r.width - 6, r.height - 4, 6, 6);
 		g2.dispose();

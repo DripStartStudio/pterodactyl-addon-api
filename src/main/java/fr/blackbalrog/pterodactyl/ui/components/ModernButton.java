@@ -17,8 +17,8 @@ import fr.blackbalrog.pterodactyl.ui.Theme;
 @SuppressWarnings("serial")
 public class ModernButton extends JButton
 {
-	private final Color  base;
-	private       Color  current;
+	private Color base;
+	private Color current;
 	private       boolean hovered;
 
 	public ModernButton(String text, Color color)
@@ -77,7 +77,8 @@ public class ModernButton extends JButton
 	protected void paintComponent(Graphics g)
 	{
 		Graphics2D g2 = (Graphics2D) g.create();
-		g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+		g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING,      RenderingHints.VALUE_ANTIALIAS_ON);
+		g2.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING, RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
 
 		Color bg = isEnabled() ? current : new Color(
 			Math.max(0, current.getRed()   - 60),
@@ -86,15 +87,27 @@ public class ModernButton extends JButton
 		g2.setColor(bg);
 		g2.fill(new RoundRectangle2D.Float(0, 0, getWidth(), getHeight(), 8, 8));
 
-		g2.setFont(getFont());
 		g2.setColor(isEnabled() ? getForeground() : Theme.TEXT_MUTED);
-		java.awt.FontMetrics fm = g2.getFontMetrics();
 		String txt = getText();
-		int tx = (getWidth()  - fm.stringWidth(txt)) / 2;
-		int ty = (getHeight() + fm.getAscent() - fm.getDescent()) / 2;
+		if (txt == null || txt.isEmpty()) { g2.dispose(); return; }
+
+		Font font = new Font("Segoe UI Symbol", getFont().getStyle(), getFont().getSize());
+		g2.setFont(font);
+		java.awt.FontMetrics fm = g2.getFontMetrics();
+		float tx = (getWidth()  - fm.stringWidth(txt)) / 2f;
+		float ty = (getHeight() + fm.getAscent() - fm.getDescent()) / 2f;
 		g2.drawString(txt, tx, ty);
 
 		g2.dispose();
+	}
+
+	@Override
+	public void setBackground(Color c)
+	{
+		super.setBackground(c);
+		base    = c;
+		current = c;
+		repaint();
 	}
 
 	public void setTextFont(Font font)
